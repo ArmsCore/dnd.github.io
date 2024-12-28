@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Справочник по ДнД</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Заголовок сайта -->
+    <header id="header" class="auth-page">
+      <div class="flex-logoname">
+        <img src="./images/logo.jpg" alt="Logo" class="header-logoimg">
+        <div class="logo">Справочник по ДнД</div>
+      </div>
+      <nav>
+        <ul>
+          <li><button id="btnback" class="btn4">Описание</button></li>
+          <li><button id="btndict" class="btn4">Словарь</button></li>
+          <li><button id="btngallery" class="btn4">Галерея</button></li>
+          <li><button id="testingButton">Тест</button></li>
+          <li><button id="btnresults" class="btn4">Личный кабинет</button></li>
+      </ul>
+      </nav>
+      <div class="user-info" id="user-info">
+          <span id="welcome-message"><p id="resultName"></p></span>
+          <button id="logout-btn">Выйти</button>
+      </div>
+  </header>
+  
+  <main >
+    <div class="wrapper">
+        <div class="carousel">
+            <div class="def">
+              <form name="formOne" id='formSlide1'novalidate >
+                <img src="./images/logo.jpg" class="img-authoriz">
+                <h1 style="margin-left: 70px;">Справочник по ДнД</h1>
+                <fieldset class="field">
+                    <legend>Логин</legend>
+                    <input title="Логин должен состоять из символов русского алфавита и цифр, иметь количество символов от 4 до 10" class="check" type="text" name="login" id="login" pattern="^[А-Яа-я0-9]+$" minlength="4" maxlength="10" required>
+                    <label for="login"></label>
+                    <div class="error" id="loginError"></div>
+                </fieldset>
+                <br>
+                <fieldset class="field">
+                    <legend>Дата рождения</legend>
+                    <input title="Дата рождения может быть не раньше 1950 года и не позже дня создания формы" class="check" type="date" name="birth" id="birth" min="1904-01-01" max="2024-12-12" required>
+                    <label for="birth"></label>
+                </fieldset>
+                <br>
+                <fieldset class="field">
+                    <legend>Пол</legend>
+                    <div class="fl">
+                      <input type="radio" name="sex" checked="checked" value="Мужской" id="male">
+                      <label for="male">Женский</label>
+                      <input type="radio" name="sex" value="Женский" id="female">
+                      <label for="female" class="right">Мужской</label>
+                    </div>
+                </fieldset>
+                <br>
+                <button id="btn1" class="btn4">далее</button>
+
+              </form>
+            </div>
+
+            <div class="def">
+              <form name="formTwo" id="formSlide2" novalidate>
+                <!-- Заголовок сайта -->
+                <h3><a style="color: #f1f1f1;">Справочник Dungeon and Dragons</a></h3>
+                
+                <p>ДнД или «Dungeon and Dragons» (D&D, DnD) – это легендарная настольная ролевая игра, впервые изданная в 1974 году в США. Несмотря на её возраст, она до сих пор безумно популярна и является частью современной культуры. Её можно увидеть в фильмах, сериалах и комиксах, некоторые из которых полностью посвящены этой игре. Многие значимые настольные игры, вроде «Vampire» и «Cyberpunk», а также современные компьютерные RPG игры появились именно благодаря D&D.</p>
+                
+                <h4><a style="color: #f1f1f1;">Особенности Dungeons and Dragons</a></h4>
+                
+                <ul>
+                  <li><strong>Как проходит игра?</strong> В Dungeon and Dragons есть две роли: ведущий, его также называют Dungeon Master (мастер подземелий, ГМ), и игрок. ГМ очень важная роль в игре, ведь именно он отвечает за окружающий игроков мир и его реакцию на их действия. Он также отыгрывает всех встретившихся игрокам существ и персонажей.</li>
+                  <li><strong>Лист персонажа:</strong> Лист персонажа в D&D — это ключевой документ, в котором хранится вся информация о вашем персонаже. Он включает основные характеристики, такие как сила, ловкость и интеллект, которые определяют успех его действий, а также позволяет отслеживать прогресс, фиксируя уровень, способности, заклинания и улучшения. В листе записывается инвентарь персонажа, включая оружие, броню и другие важные предметы. Он также помогает быстро ориентироваться в доступных умениях и действиях, что делает игру более удобной. Кроме того, в листе можно описать предысторию, цели и черты личности персонажа, чтобы придать ему больше глубины. Это своего рода "паспорт" персонажа, который помогает вам и мастеру игры сохранять ясность и погружение в процесс.</li>
+                  <li><strong>Основная механика ДнД:</strong> В D&D используются игральные кубы: d4, d6, d8, d10, d12, d20 и d100. Основной — это d20, его бросают для проверок атак, спасбросков и характеристик. Остальные кубы применяются для урона, лечения и эффектов: например, d4 для слабого урона, d6 для оружия, d8 и d10 для мощных атак, а d12 — для сильнейших ударов. Куб d100, который бросают двумя d10, нужен для случайных событий. Кубы делают игру увлекательной и непредсказуемой.</li>
+                  <li><strong>Взаимодействие между игроками:</strong> Ролевое взаимодействие — это основа игры в Dungeons & Dragons. Каждый игрок принимает роль своего персонажа, взаимодействуя с другими участниками и миром игры через диалоги, решения и действия. Это включает обсуждения с NPC, построение отношений с другими персонажами, принятие моральных решений и выражение личных целей. Ролевое взаимодействие делает персонажа живым, позволяет влиять на развитие сюжета и усиливает погружение в игровой процесс. Главная цель — не только преодолеть испытания, но и создать уникальную историю вашего героя.</li>
+                
+				<p id="resultName"></p>
+              </form>
+            </div>
+            
+
+            <div class="def">
+              <form name="formThree" id='formSlide3' novalidate>
+              <h2>Проверка на познания в ДнД</h2>
+      <div>
+        <label for="question1">В каком году вышла 3-я редакция ДнД?</label>
+        <textarea id="question1" placeholder="Ваш ответ" required></textarea>
+      </div>
+      <div>
+        <label for="question2">Как зовут мастера и актера озвучки, по кампании которого был создан сериал Vox Machina?</label>
+        <textarea id="question2" placeholder="Ваш ответ" required></textarea>
+      </div>
+      <div>
+        <label for="question3">Какая цель игры в Dungeons & Dragons?</label>
+        <div>
+          <input type="radio" id="question3-option2" name="question3" value="Выиграть у других игроков.">
+          <label for="question3">Выиграть других игроков.</label>
+        </div>
+        <div>
+          <input type="radio" id="question3-option3" name="question3" value="Создать и прожить историю, взаимодействуя с миром.">
+          <label for="question3">Создать и прожить историю, взаимодействуя с миром.</label>
+        </div>
+        <div>
+          <input type="radio" id="question3-option4" name="question3" value="Уничтожить всех монстров на карте.">
+          <label for="question3">Уничтожить всех монстров на карте.</label>
+        </div>
+      </div>
+      <div>
+        <label for="question4">Какую роль выполняет ведущий игры (Dungeon Master)?</label>
+        <div>
+          <input type="radio" id="question4-option1" name="question4" value="Следит за соблюдением правил и играет монстров." required>
+          <label for="question4-option1">Следит за соблюдением правил и играет монстров.</label>
+        </div>
+        <div>
+          <input type="radio" id="question4-option2" name="question4" value="Управляет только боевыми сценами">
+          <label for="question4-option2">Управляет только боевыми сценами</label>
+        </div>
+        <div>
+          <input type="radio" id="question4-option3" name="question4" value="Помогает игрокам победить быстрее.">
+          <label for="question4-option3">Помогает игрокам победить быстрее.</label>
+        </div>
+      </div>
+      <div>
+        <label for="question5">Какая кость используется для определения успеха большинства действий?</label>
+        <div>
+          <input type="radio" id="question5-option1" name="question5" value="D20 (двадцатигранник)." required>
+          <label for="question5-option1">D20 (двадцатигранник).</label>
+        </div> 
+        <div>
+          <input type="radio" id="question5-option2" name="question5" value="D6 (шестигранник).">
+          <label for="question5-option2">D6 (шестигранник).</label>
+        </div>
+        <div>
+          <input type="radio" id="question5-option3" name="question5" value="D12 (двенадцатигранник).">
+          <label for="question5-option3">D12 (двенадцатигранник).</label>
+        </div>
+      </div>
+      <div>
+        <label for="question6">Что такое очки здоровья (HP)?</label>
+        <div>
+          <input type="radio" id="question6-option1" name="question6" value="Уровень силы персонажа." required>
+          <label for="question6-option1">Уровень силы персонажа.</label>
+        </div>
+        <div>
+          <input type="radio" id="question6-option2" name="question6" value="Количество урона, которое может выдержать персонаж.">
+          <label for="question6-option2">Количество урона, которое может выдержать персонаж.</label>
+        </div>
+        <div>
+          <input type="radio" id="question6-option3" name="question6" value="Количество используемых заклинаний.">
+          <label for="question6-option3">Количество используемых заклинаний.</label>
+        </div>
+        <div>
+
+          <br>
+          <br>
+
+          <div id="totalScore"></div>
+
+        </div>
+        <button id="btn2" class="btn2">Вернуться обратно</button> 
+      <button id="btn3" class="btn3">Показать результаты</button>
+      <button id="Again" class="btn3">Еще раз</button>     
+      </form>
+			<div id="totalScore"></div>
+      
+      
+        
+      
+    </div>
+    </div> 
+          <div class="def">
+          <form name="formFour id=formSlide4">
+          <div class="result-container" >
+            <br>
+            Ваше имя:<div class="result-name" id="resultName2" style="font-size: 20px;"></div>
+            Ваш пол:<div class="result-gender" id="resultGender" style="font-size: 20px;"></div>
+            Ваша дата рождения:<div class="result-info" id="resultInfo" style="font-size: 20px;"></div>
+            <br>
+            Результаты последнего теста:
+			<br>
+			<div id="totalScore"></div>
+			<div id="questionResult1"></div>
+			<div id="questionResult2"></div>
+			<div id="questionResult3"></div>
+			<div id="questionResult4"></div>
+			<div id="questionResult5"></div>
+			<div id="questionResult6"></div>
+			<div id="totalScore"></div>
+            <div class="questionResult1" id="questionResult1"></div>
+            <div class="questionResult2" id="questionResult2"></div>
+            <div class="questionResult3" id="questionResult3"></div>
+            <div class="questionResult4" id="questionResult4"></div>
+            <div class="questionResult6" id="questionResult6"></div>
+			<br>
+            <button id="logout" class="btn2">Выйти</button> 
+          </form>
+          </div>
+          </div>
+
+          <div class="def">
+          <form name="formFive" id="formSlide5" novalidate>
+            <h2>Словарь терминов</h2>
+            
+            
+            <!-- Поле для поиска -->
+            <input type="text" id="searchInput" oninput="searchTerm()" placeholder="Поиск термина...">
+            
+            <div id="termList">
+              <div class="term" onclick="showDescription('Реакция')">Реакция</div>
+              <div class="term" onclick="showDescription('Хиты')">Хиты</div>
+              <div class="term" onclick="showDescription('Происхождение')">Происхождение</div>
+              <div class="term" onclick="showDescription('Артефакты')">Артефакты</div>
+              <div class="term" onclick="showDescription('Класс Доспеха')">Класс Доспеха</div>
+              <div class="term" onclick="showDescription('Спасброски')">Спасброски</div>
+              <div class="term" onclick="showDescription('Характеристики')">Характеристики</div>
+              <div class="term" onclick="showDescription('Бонусное действие')">Бонусное действие</div>
+              <div class="term" onclick="showDescription('Опыт')">Опыт</div>
+              <div class="term" onclick="showDescription('Состояния')">Состояния</div>
+            </div>
+          
+            <!-- Поле для отображения описания выбранного термина -->
+            <div id="descriptionField">
+              <h3>Описание:</h3>
+              <p id="descriptionText">Выберите термин для отображения описания.</p>
+            </div>
+          </form>
+        </div>
+           
+
+        <div class="def">
+          <form name="formSix" id="formSlide6" novalidate>
+              <div class="slider-container">
+                  <!-- Контейнер слайдера -->
+                  <div class="slider">
+                      <!-- Слайды -->
+                      <div class="slide" id="slide1">
+                          <img src="./images/1.jpg" alt="Grineer">
+                          <p class="caption">Иллитид</p>
+                      </div>
+                      <div class="slide" id="slide2">
+                          <img src="./images/2.jpg" alt="Corpus">
+                          <p class="caption">Миниатюра</p>
+                      </div>
+                      <div class="slide" id="slide3">
+                          <img src="./images/3.jpg" alt="Infested">
+                          <p class="caption">Дайсы</p>
+                      </div>
+                      <div class="slide" id="slide4">
+                          <img src="./images/4.jpg" alt="Sentients">
+                          <p class="caption">Мэттью Мерсер</p>
+                      </div>
+                      <div class="slide" id="slide5">
+                          <img src="./images/5.jpg" alt="Tenno">
+                          <p class="caption">Довольный тифлинг</p>
+                      </div>
+                  </div>
+                  <!-- Кнопки слайдера -->
+                  <button type="button" id="prevSlide" class="slider-button"><</button>
+                  <button type="button" id="nextSlide" class="slider-button">></button>
+                  <!-- Информация о текущем слайде -->
+                  <div id="slideInfo" class="slide-info">1 слайд из 5</div>
+              </div>
+          </form>
+      </div>
+      
+        
+
+        </div>
+    </div>
+</main>
+    <footer id="footer" >
+        <div class="footer-content">
+            <div class="footer-buttons">
+                <p id="welcome-message-footer" ></p>
+            </div>
+            <div class="fl3">
+              <p>Контакты: <a href="#">+7 (907) 328-71-70</a></p>
+              <p>Соцсети: </p>
+              <a href="https://vk.com/bythefrog"><img src="./images/vk.png.jpg" style="width: 50px; height: 50px;"></a>
+              <a href="t.me/sneaky_dice"><img src="./images/telegram.png.jpg" style="width: 50px; height: 50px;"></a>
+            </div>
+            <p>&copy; 2024 ttg club</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
